@@ -32,7 +32,7 @@ const DyslexiaPage = (props) => (
         <h2>objective</h2>
       </div>
       <div className="content">
-        <p>Improve lesson completion rate in order to improve accuracy and fluency to advance the user's overall reading competency.</p>
+        <p>Improve lesson completion rate in order to increase accuracy and fluency advancing the user's overall reading competency.</p>
       </div>
     </div>
     <div className="text-column neo-inner">

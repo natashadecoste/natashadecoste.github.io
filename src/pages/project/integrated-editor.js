@@ -33,7 +33,7 @@ const IntegratedEditorPage = () => (
         <h2>objective</h2>
       </div>
       <div className="content">
-        <p>Utilize the design thinking framework to improving a developer's learning experience with an IBM B2B Product.</p>
+        <p>Utilize the design thinking framework to improve a developer's learning experience with an IBM B2B Product.</p>
       </div>
     </div>
     <div className="text-column neo-inner">
