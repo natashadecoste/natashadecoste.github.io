@@ -1,0 +1,52 @@
+{
+    "projects": [
+        {
+            "title": "Chart Editor UI",
+            "labels": [
+                {
+                    "name": "User Experience",
+                    "color": "green"
+                },
+                {
+                    "name": "User Interface",
+                    "color": "orange"
+                }
+            ],
+            "pageLink": "chart-editor"
+        },
+        {
+            "title": "Blue Steel",
+            "labels": [
+                {
+                    "name": "User Experience",
+                    "color": "green"
+                }
+            ],
+            "pageLink": "integrated-editor"
+        },
+        {
+            "title": "Carbon Charts",
+            "labels": [
+                {
+                    "name": "Front End Development",
+                    "color": "blue"
+                }
+            ],
+            "pageLink": "carbon-charts"
+        },
+        {
+            "title": "Dyslexia Project",
+            "labels": [
+                {
+                    "name": "Front End Development",
+                    "color": "blue"
+                },
+                {
+                    "name": "User Experience",
+                    "color": "green"
+                }
+            ],
+            "pageLink": "dyslexia-project"
+        }
+    ]
+}
