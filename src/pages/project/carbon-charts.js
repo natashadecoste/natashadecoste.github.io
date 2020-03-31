@@ -1,4 +1,5 @@
-import React, { Component } from "react"
+import React from "react"
+import { window } from "browser-monads";
 import { StackedBarChart } from "@carbon/charts-react"
 import "@carbon/charts/styles.css";
 
@@ -15,10 +16,6 @@ import typescript from "./../../assets/project-assets/technologies/typescript.pn
 // icons
 import role from "./../../assets/project-assets/technologies/work.png";
 import impact from "./../../assets/project-assets/technologies/impact.png";
-
-// services
-import * as services from "./../../services/responsive-service"
-
 
 const stackedBarOptions = {
 	title: "Weekly time spent in quarantine",
@@ -86,8 +83,28 @@ const stackedBarData = {
 };
 
 class CCpage extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			width: window.innerWidth,
+		};
+	}
+
+	componentWillMount() {
+		window.addEventListener('resize', this.handleWindowSizeChange);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.handleWindowSizeChange);
+	}
+
+	handleWindowSizeChange = () => {
+		this.setState({ width: window.innerWidth });
+	};
+
 	render() {
-		const isMobile = services.isMobileSize();
+		const { width } = this.state;
+		const isMobile = width <= 768;
 		if (isMobile) {
 			// mobile view
 			return (
@@ -161,7 +178,7 @@ class CCpage extends React.Component {
 								</div>
 							</div>
 							{/* technologies section */}
-							<div className="text-column neo-inner" style={{marginBottom: 0}}>
+							<div className="text-column neo-inner" style={{ marginBottom: 0 }}>
 								<div className="title">
 									<h2>technologies</h2>
 								</div>

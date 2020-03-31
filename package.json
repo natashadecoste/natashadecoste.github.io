@@ -7,6 +7,7 @@
   "dependencies": {
     "@carbon/charts": "^0.30.3",
     "@carbon/charts-react": "^0.30.3",
+    "browser-monads": "^1.0.0",
     "carbon-components": "^10.10.2",
     "cli-spinners": "^2.2.0",
     "d3": "^5.15.0",

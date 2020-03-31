@@ -1,4 +1,6 @@
 // function for determining whether ton use mobile or desktop view
 export const isMobileSize = () => {
-    return window.innerWidth <= 768;
+    if (typeof window !== `undefined`) {
+        return window.innerWidth <= 768;
+    }
 }
