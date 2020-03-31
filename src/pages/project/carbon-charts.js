@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import { StackedBarChart } from "@carbon/charts-react"
 import "@carbon/charts/styles.css";
 
@@ -16,6 +16,9 @@ import typescript from "./../../assets/project-assets/technologies/typescript.pn
 import role from "./../../assets/project-assets/technologies/work.png";
 import impact from "./../../assets/project-assets/technologies/impact.png";
 
+// services
+import * as services from "./../../services/responsive-service"
+
 
 const stackedBarOptions = {
 	title: "Weekly time spent in quarantine",
@@ -30,7 +33,7 @@ const stackedBarOptions = {
 			title: "percentage (%) of day"
 		}
 	},
-	height: "300px",
+	// height: "300px",
 	width: "100%"
 };
 
@@ -82,52 +85,116 @@ const stackedBarData = {
 	]
 };
 
-const CCpage = (props) => (
-	<ProjectPage title="Carbon Charts">
-		<p>Dataviz framework built with IBM's Carbon Design System</p>
-		<div className="chart-container neo">
-			<StackedBarChart
-				data={stackedBarData}
-				options={stackedBarOptions}
-			/>
-		</div>
-		<div className="text-row neo-inner">
-			<div className="title">
-				<img src={role} style={{ width: "25px" }}></img>
-				<h2>roles</h2>
-			</div>
-			<div className="content labels">
-				<Label name="Front End Developer" color="green" styleName="neo"></Label>
-			</div>
-		</div>
-		<div className="text-column neo-inner">
-			<div className="title">
-				<img src={impact} style={{ width: "50px" }}></img>
-				<h2>impact</h2>
-			</div>
-			<div className="content">
-				<ul>
-					<li>Decreasing the time to delivery for high quality data visualizations within IBM's product teams.</li>
-					<hr></hr>
-					<li>Contributing a framework agnostic library to opensource will increase brand awareness for IBM as a leader in data visualizations</li>
-				</ul>
-			</div>
-		</div>
-		<div className="text-column neo-inner">
-			<div className="title">
-				{/* <img src={impact} style={{ width: "50px" }}></img> */}
-				<h2>technologies</h2>
-			</div>
-			<div className="image-row">
-				<div className="half neo">
-					<img src={d3} />
-				</div>
-				<div className="half neo">
-					<img src={typescript}></img>
-				</div>
-			</div>
-		</div>
-	</ProjectPage>
-);
+class CCpage extends React.Component {
+	render() {
+		const isMobile = services.isMobileSize();
+		if (isMobile) {
+			// mobile view
+			return (
+				<ProjectPage title="Carbon Charts" heading="Dataviz framework built with IBM's Carbon Design System">
+					<div className="chart-container neo">
+						<StackedBarChart
+							data={stackedBarData}
+							options={stackedBarOptions}
+						/>
+					</div>
+					<div className="text-row neo-inner">
+						<div className="title">
+							<img src={role} style={{ width: "25px" }}></img>
+							<h2>roles</h2>
+						</div>
+						<div className="content labels">
+							<Label name="Front End Developer" color="green" styleName="neo"></Label>
+						</div>
+					</div>
+					<div className="text-column neo-inner">
+						<div className="title">
+							<img src={impact} style={{ width: "50px" }}></img>
+							<h2>impact</h2>
+						</div>
+						<div className="content">
+							<ul>
+								<li>Decreasing the time to delivery for high quality data visualizations within IBM's product teams.</li>
+								<hr></hr>
+								<li>Contributing a framework agnostic library to opensource will increase brand awareness for IBM as a leader in data visualizations</li>
+							</ul>
+						</div>
+					</div>
+					<div className="text-column neo-inner">
+						<div className="title">
+							{/* <img src={impact} style={{ width: "50px" }}></img> */}
+							<h2>technologies</h2>
+						</div>
+						<div className="image-row">
+							<div className="half neo">
+								<img src={d3} />
+							</div>
+							<div className="half neo">
+								<img src={typescript}></img>
+							</div>
+						</div>
+					</div>
+				</ProjectPage>
+			);
+		} else {
+			// desktop view
+			return (
+				<ProjectPage title="Carbon Charts" heading="Dataviz framework built with IBM's Carbon Design System">
+					<div className="dashboard-row">
+						<div className="col-1">
+							<div className="chart-container neo">
+								<StackedBarChart
+									data={stackedBarData}
+									options={stackedBarOptions}
+								/>
+							</div>
+						</div>
+						<div className="col-2">
+							{/* roles section */}
+							<div className="text-row neo-inner">
+								<div className="title">
+									<img src={role} style={{ width: "25px" }}></img>
+									<h2>roles</h2>
+								</div>
+								<div className="content labels">
+									<Label name="Front End Developer" color="green" styleName="neo"></Label>
+								</div>
+							</div>
+							{/* technologies section */}
+							<div className="text-column neo-inner" style={{marginBottom: 0}}>
+								<div className="title">
+									<h2>technologies</h2>
+								</div>
+								<div className="image-row">
+									<div className="half neo">
+										<img src={d3} />
+									</div>
+									<div className="half neo">
+										<img src={typescript}></img>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="col-full">
+						<div className="text-column neo-inner">
+							<div className="title">
+								<img src={impact} style={{ width: "50px" }}></img>
+								<h2>impact</h2>
+							</div>
+							<div className="content">
+								<ul>
+									<li>Decreasing the time to delivery for high quality data visualizations within IBM's product teams.</li>
+									<hr></hr>
+									<li>Contributing a framework agnostic library to opensource will increase brand awareness for IBM as a leader in data visualizations</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</ProjectPage>
+			);
+		}
+	}
+}
 
 export default CCpage

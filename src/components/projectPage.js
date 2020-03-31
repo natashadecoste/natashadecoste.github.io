@@ -12,6 +12,7 @@ const ProjectPage = (props) => (
             <h1 className="title">
                 {props.title}
             </h1>
+            <p>{props.heading}</p>
         </div>
         {props.children}
     </div>

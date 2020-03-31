@@ -1,14 +1,59 @@
-.project-page-carbon-charts {
-    .chart-container {
-        padding: 10px;
-        border-radius: 10px;
-        margin-top: 1em;
-    }
+@import "./variables";
 
-    .bar-chart {
-        width: 100%;
-        height: auto;
-        margin-top: 1.5em;
-        border-radius: 10px;
-    }
+.project-page-carbon-charts {
+	.chart-container {
+		padding: 10px;
+		border-radius: 10px;
+		margin-top: 1em;
+	}
+
+	.bar-chart {
+		width: 100%;
+		height: auto;
+		margin-top: 1.5em;
+		border-radius: 10px;
+	}
+}
+
+// desktop specific code
+.project-page-carbon-charts {
+	.dashboard-row {
+		margin-top: 1em;
+		width: 100%;
+		display: inline-flex;
+
+		.col-1 {
+			width: 65%;
+			height: auto;
+
+			.chart-container {
+				height: 100%;
+				box-sizing: border-box;
+				// padding: 0;
+				// border-radius: 0;
+				margin-top: 0;
+			}
+		}
+		.col-2 {
+			width: 35%;
+			padding-left: 1em;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			.text-row {
+				margin: 0;
+			}
+		}
+	}
+	.col-full {
+	}
+}
+
+@media (max-width: $breakpoint-phone) {
+	.project-page-carbon-charts {
+		.chart-container .chart-holder {
+            height: 300px;
+		}
+	}
 }
