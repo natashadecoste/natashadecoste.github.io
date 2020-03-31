@@ -2,167 +2,201 @@
 
 // breakpoint to go desktop
 $breakpoint-phone: 768px;
-
-.page-body {
-	height: 40vh;
-	display: flex;
-	flex-direction: row;
-
-	.header-bar {
-		display: none;
-	}
-
-	.information {
-		// display: none;
-		z-index: 1;
-		height: 100%;
-		width: 40%;
-		.text-content {
-			color: $primary-color;
-			margin: 3em;
-			h1 {
-				font-size: 40px;
-				margin-bottom: 0.2em;
-			}
-			p {
-				font-style: italic;
-				font-weight: 400;
-				margin: unset;
-			}
-			.icons-social {
-				padding: 10px 0;
-	
-				a {
-					margin-right: 0.5em;
-
-				}
-				svg {
-					padding: 8px;
-					width: 2em;
-					border-radius: 50%;
-					fill: black;
-				}
-			}
-		}
-	}
-
-	.graphics {
-		height: 100%;
-		width: 60%;
-		position: relative;
-		.headshot {
-			display: none;
-		}
-
-		#looping-shell {
-			position: absolute;
-			top: 25%;
-			left: 30%;
-			transform: translate(-55%, -50%);
-			opacity: 0.98;
-			width: 60%;
-		}
-
-		#interactive-shell {
-			position: absolute;
-			top: 55%;
-			left: 60%;
-			transform: translate(-55%, -50%);
-		}
-	}
-}
-
-@media (max-width: $breakpoint-phone) {
+main {
 	.page-body {
-		flex-direction: row-reverse;
-		height: 35vh;
+		height: 40vh;
 		display: flex;
+		flex-direction: row;
 
 		.header-bar {
-			display: unset;
-			box-shadow: 5px 4px 10px;
-			width: 100vw;
-			height: 25vh;
-			position: absolute;
-			top: 0;
-			border-bottom-right-radius: 25px;
-			border-bottom-left-radius: 25px;
-			background: #000000; /* fallback for old browsers */
-			background: -webkit-linear-gradient(to right, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
-			background: linear-gradient(
-				to right,
-				#434343,
-				#000000
-			); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		}
-
-		.background-section {
 			display: none;
 		}
 
 		.information {
-			width: 45%;
-
+			z-index: 1;
+			height: 100%;
+			flex-grow: 1;
 			.text-content {
-				text-align: left;
-				left: unset;
-				transform: unset;
-				position: relative;
-				top: unset;
-				margin: 0;
-				margin-top: 10vh;
-
-				h1.name {
-					color: lightgray;
-					font-size: 18px;
+				color: $primary-color;
+				margin: 3em;
+				h1 {
+					font-size: 40px;
+					margin-bottom: 0.2em;
 				}
-
 				p {
-					margin-top: 0.4em;
-					font-size: 0.8em;
+					font-style: italic;
+					font-weight: 400;
+					margin: unset;
 				}
-
 				.icons-social {
-					margin: 0.5em 0;
-					height: 2em;
-					padding: unset;
-					
+					padding: 10px 0;
+
+					a {
+						margin-right: 0.5em;
+					}
 					svg {
-						&.neo {
-							background: unset;
-							box-shadow: unset;
-						}
-						border-radius: unset;
-						fill: white;
-						padding: 0;
-						height: 100%;
-						width: auto;
+						padding: 8px;
+						width: 2em;
+						border-radius: 50%;
+						fill: black;
 					}
 				}
 			}
 		}
 
 		.graphics {
+			height: 100%;
+			width: 50%;
 			position: relative;
-			width: 55%;
-
+			max-width: 800px;
+			margin-right: 10%;
 			.headshot {
-				display: unset;
-				right: 0;
-				// width: 70%;
-				max-height: 30vh;
-				border-radius: 25px;
-				position: absolute;
-				margin: 10%;
-				margin-right: 8%;
-			}
-
-			#interactive-shell {
 				display: none;
 			}
 
 			#looping-shell {
+				position: absolute;
+				top: 25%;
+				left: 30%;
+				transform: translate(-55%, -50%);
+				opacity: 0.98;
+				width: 60%;
+			}
+
+			#interactive-shell {
+				position: absolute;
+				top: 55%;
+				left: 60%;
+				transform: translate(-55%, -50%);
+			}
+		}
+	}
+	.built-with {
+		margin: 1em;
+		padding: 20px;
+		border-radius: 10px;
+		margin-top: 4em;
+		margin-bottom: 0;
+		p {
+			text-align: center;
+			font-size: 12px;
+			
+		}
+		.image-row {
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			justify-content: center;
+			margin: 0;
+			.badge {
+				width: 40px;
+				height: 40px;
+				border-radius: 10px;
+				padding: 5px;
+				text-align: center;
+				margin: 0 0.2em;
+				img {
+					width: auto;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint-phone) {
+	main {
+		.page-body {
+			flex-direction: row-reverse;
+			height: 35vh;
+			display: flex;
+
+			.header-bar {
+				display: unset;
+				box-shadow: 5px 4px 10px;
+				width: 100vw;
+				height: 25vh;
+				position: absolute;
+				top: 0;
+				border-bottom-right-radius: 25px;
+				border-bottom-left-radius: 25px;
+				background: #000000; /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(
+					to right,
+					#434343,
+					#000000
+				); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.background-section {
 				display: none;
+			}
+
+			.information {
+				width: 45%;
+
+				.text-content {
+					text-align: left;
+					left: unset;
+					transform: unset;
+					position: relative;
+					top: unset;
+					margin: 0;
+					margin-top: 10vh;
+
+					h1.name {
+						color: lightgray;
+						font-size: 18px;
+					}
+
+					p {
+						margin-top: 0.4em;
+						font-size: 0.8em;
+					}
+
+					.icons-social {
+						margin: 0.5em 0;
+						height: 2em;
+						padding: unset;
+
+						svg {
+							&.neo {
+								background: unset;
+								box-shadow: unset;
+							}
+							border-radius: unset;
+							fill: white;
+							padding: 0;
+							height: 100%;
+							width: auto;
+						}
+					}
+				}
+			}
+
+			.graphics {
+				position: relative;
+				width: 55%;
+
+				.headshot {
+					display: unset;
+					right: 0;
+					// width: 70%;
+					max-height: 30vh;
+					border-radius: 25px;
+					position: absolute;
+					margin: 10%;
+					margin-right: 8%;
+				}
+
+				#interactive-shell {
+					display: none;
+				}
+
+				#looping-shell {
+					display: none;
+				}
 			}
 		}
 	}
