@@ -1,16 +1,7 @@
-import React, { Component } from "react"
-import {
-  BrowserView,
-  MobileView,
-  isBrowser,
-  isMobile
-} from "react-device-detect";
-import { Link } from "gatsby"
-
+import React from "react"
 
 // import components
 import Layout from "../components/layout"
-import ProjectTile from "./../components/projectTile"
 import ProjectSection from "./../components/projectSection"
 import Shell from "../components/shell"
 import Terminal from "react-console-emulator"
@@ -46,19 +37,12 @@ const commands = {
   npx: {
     usage: 'npx natashadecoste',
     fn: function () {
-      // console.log(arguments);
       if (arguments[0] === "natashadecoste") {
         return "Run `npx natashadecoste` in your local terminal to see my card";
       }
       else {
         return "Error: try running `npx natashadecoste`";
       }
-    }
-  },
-  print: {
-    usage: 'printBox <string>',
-    fn: function () {
-      return "╭──────────────────────────────────────────────────────────╮\n│                                                          ││                  Natasha DeCoste (she/her)               ││                                                          │\n│           Web:  https://natashadecoste.github.io         │\n│          Work:  Front End Developer & Designer at IBM    │\n│                                                          │\n│        GitHub: https://github.com/natashadecoste        │\n│      LinkedIn: https://linkedin.com/in/natashadecoste   │\n│           npm: https://npmjs.com/~natashadecoste        │\n│                                                          │\n│          Card: npx natashadecoste                       │\n│                                                          │\n╰──────────────────────────────────────────────────────────╯";
     }
   }
 }
