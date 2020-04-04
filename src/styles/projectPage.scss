@@ -11,6 +11,9 @@
         border-radius: 10px;
         svg {
             fill: $font-ui-neo;
+            &:hover {
+                fill: $accent-color;
+            }
         }
 
         color: $font-ui-neo;

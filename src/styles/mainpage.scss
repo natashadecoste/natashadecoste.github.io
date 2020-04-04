@@ -44,7 +44,11 @@ main {
 						width: 2em;
 						border-radius: 50%;
 						fill: black;
+						&:hover {
+							fill: $accent-color;
+						}
 					}
+
 				}
 			}
 		}
@@ -87,7 +91,6 @@ main {
 		p {
 			text-align: center;
 			font-size: 12px;
-			
 		}
 
 		.image-row {
@@ -214,16 +217,15 @@ main {
 	}
 }
 
-
 @media all and (min-width: 1082px) {
 	main .page-body {
 		max-width: 1200px;
-        margin: auto;
+		margin: auto;
 	}
 
-    .project {
-        padding: 1em 10%;
-        max-width: 1200px;
-        margin: auto;
-    }
+	.project {
+		padding: 1em 10%;
+		max-width: 1200px;
+		margin: auto;
+	}
 }
