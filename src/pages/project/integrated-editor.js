@@ -1,4 +1,5 @@
 import React from "react"
+import { window } from "browser-monads";
 
 // components
 import ProjectPage from "../../components/projectPage"
