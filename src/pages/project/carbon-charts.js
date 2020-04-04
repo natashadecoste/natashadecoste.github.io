@@ -1,5 +1,7 @@
 import React from "react"
 import { window } from "browser-monads";
+
+// carbon charts imports
 import { StackedBarChart } from "@carbon/charts-react"
 import "@carbon/charts/styles.css";
 
