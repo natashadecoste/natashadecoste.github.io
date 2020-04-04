@@ -140,6 +140,25 @@
         margin: 0;
 
     }
+
+    .dashboard-row {
+        margin-top: 1em;
+		width: 100%;
+        display: inline-flex;
+        
+        .col-1 {
+			width: 70%;
+            height: auto;
+        }
+
+        .col-2 {
+			width: 30%;
+			padding-left: 1em;
+			display: flex;
+			flex-direction: column;
+            justify-content: space-between;
+        }
+    }
 }
 
 @media all and (min-width: 1082px) {

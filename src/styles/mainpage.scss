@@ -7,6 +7,7 @@ main {
 		height: 40vh;
 		display: flex;
 		flex-direction: row;
+		margin: auto;
 
 		.header-bar {
 			display: none;
@@ -16,13 +17,16 @@ main {
 			z-index: 1;
 			height: 100%;
 			flex-grow: 1;
+
 			.text-content {
 				color: $primary-color;
 				margin: 3em;
+
 				h1 {
 					font-size: 40px;
 					margin-bottom: 0.2em;
 				}
+
 				p {
 					font-style: italic;
 					font-weight: 400;
@@ -34,6 +38,7 @@ main {
 					a {
 						margin-right: 0.5em;
 					}
+
 					svg {
 						padding: 8px;
 						width: 2em;
@@ -49,7 +54,7 @@ main {
 			width: 50%;
 			position: relative;
 			max-width: 800px;
-			margin-right: 10%;
+
 			.headshot {
 				display: none;
 			}
@@ -66,7 +71,7 @@ main {
 			#interactive-shell {
 				position: absolute;
 				top: 55%;
-				left: 60%;
+				left: 55%;
 				transform: translate(-55%, -50%);
 				min-width: 350px;
 			}
@@ -78,17 +83,20 @@ main {
 		border-radius: 10px;
 		margin-top: 4em;
 		margin-bottom: 0;
+
 		p {
 			text-align: center;
 			font-size: 12px;
 			
 		}
+
 		.image-row {
 			display: flex;
 			width: 100%;
 			flex-direction: row;
 			justify-content: center;
 			margin: 0;
+
 			.badge {
 				width: 40px;
 				height: 40px;
@@ -96,6 +104,7 @@ main {
 				padding: 5px;
 				text-align: center;
 				margin: 0 0.2em;
+
 				img {
 					width: auto;
 					height: 100%;
@@ -167,6 +176,7 @@ main {
 								background: unset;
 								box-shadow: unset;
 							}
+
 							border-radius: unset;
 							fill: white;
 							padding: 0;
@@ -202,4 +212,18 @@ main {
 			}
 		}
 	}
+}
+
+
+@media all and (min-width: 1082px) {
+	main .page-body {
+		max-width: 1200px;
+        margin: auto;
+	}
+
+    .project {
+        padding: 1em 10%;
+        max-width: 1200px;
+        margin: auto;
+    }
 }

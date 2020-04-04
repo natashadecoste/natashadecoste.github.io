@@ -18,28 +18,16 @@
 // desktop specific code
 .project-page-carbon-charts {
 	.dashboard-row {
-		margin-top: 1em;
-		width: 100%;
-		display: inline-flex;
 
 		.col-1 {
-			width: 65%;
-			height: auto;
 
 			.chart-container {
 				height: 100%;
 				box-sizing: border-box;
-				// padding: 0;
-				// border-radius: 0;
 				margin-top: 0;
 			}
 		}
 		.col-2 {
-			width: 35%;
-			padding-left: 1em;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
 
 			.text-row {
 				margin: 0;
